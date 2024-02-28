@@ -1,0 +1,6 @@
+.trans-slide[mode="close"] {
+   @apply translate-x-[calc(100%_+_2.5rem)];
+}
+.trans-slide[active="active"] {
+   @apply translate-x-0;
+}

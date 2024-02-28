@@ -1,0 +1,163 @@
+input {
+   outline: none;
+   appearance: none;
+}
+
+.input-focus-state {
+   @apply ring-0 focus:ring-4 ring-[var(--primary-very-light)] focus:border-[var(--primary)] transition-[box-shadow,border-color];
+}
+
+.input-keyboard input {
+   @apply ring-0 focus:ring-4 transition-[box-shadow,border-color];
+}
+.input-keyboard .success {
+   @apply text-emerald-600 hidden;
+}
+.input-keyboard .error {
+   @apply text-red-600 hidden;
+}
+.input-keyboard .normal {
+   @apply text-gray-400 hidden;
+}
+
+.input-keyboard[state="normal"] input {
+   @apply ring-[var(--primary-very-light)] focus:border-[var(--primary)];
+}
+.input-keyboard[state="normal"] .normal {
+   @apply block;
+}
+.input-keyboard[state="error"] input {
+   @apply ring-red-50 border-red-500;
+}
+.input-keyboard[state="error"] .error {
+   @apply block;
+}
+.input-keyboard[state="success"] input {
+   @apply ring-emerald-50 focus:border-emerald-400;
+}
+.input-keyboard[state="success"] .success {
+   @apply block;
+}
+
+.checkbox {
+   flex-shrink: 0;
+   --chkbg: var(--primary);
+   --chkfg: white;
+   --chksize: 1.2rem;
+   --chkradius: 0.4rem;
+   height: var(--chksize);
+   width: var(--chksize);
+   cursor: pointer;
+   appearance: none;
+   border-radius: var(--chkradius);
+   border-width: 1px;
+   border-color: var(--primary);
+   --tw-border-opacity: 0.2;
+}
+.checkbox:focus {
+   box-shadow: none;
+}
+.checkbox:focus-visible {
+   outline-style: solid;
+   outline-width: 2px;
+   outline-offset: 2px;
+   outline-color: var(--primary);
+}
+.checkbox:checked,
+.checkbox[checked="true"] {
+   background-repeat: no-repeat;
+   animation: checkmark var(--animation-input, 0.2s) ease-out;
+   background-color: var(--chkbg);
+   background-image: linear-gradient(
+         -45deg,
+         transparent 65%,
+         var(--chkbg) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
+      linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
+      linear-gradient(
+         45deg,
+         var(--chkbg) 30%,
+         var(--chkfg) 30.99%,
+         var(--chkfg) 40%,
+         transparent 40.99%
+      ),
+      linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%);
+}
+.checkbox:checked,
+.checkbox[checked="true"] {
+   background-repeat: no-repeat;
+   animation: checkmark var(--animation-input, 0.2s) ease-out;
+   background-color: var(--chkbg);
+   background-image: linear-gradient(
+         -45deg,
+         transparent 65%,
+         var(--chkbg) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
+      linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
+      linear-gradient(
+         45deg,
+         var(--chkbg) 30%,
+         var(--chkfg) 30.99%,
+         var(--chkfg) 40%,
+         transparent 40.99%
+      ),
+      linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%);
+}
+.checkbox:checked,
+.checkbox[checked="true"] {
+   background-repeat: no-repeat;
+   animation: checkmark var(--animation-input, 0.2s) ease-out;
+   background-color: var(--chkbg);
+   background-image: linear-gradient(
+         -45deg,
+         transparent 65%,
+         var(--chkbg) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
+      linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
+      linear-gradient(
+         45deg,
+         var(--chkbg) 30%,
+         var(--chkfg) 30.99%,
+         var(--chkfg) 40%,
+         transparent 40.99%
+      ),
+      linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%);
+}
+.checkbox:indeterminate {
+   --tw-bg-opacity: 1;
+   background-color: var(--primary);
+   background-repeat: no-repeat;
+   animation: checkmark var(--animation-input, 0.2s) ease-out;
+   background-image: linear-gradient(90deg, transparent 80%, var(--chkbg) 80%),
+      linear-gradient(-90deg, transparent 80%, var(--chkbg) 80%),
+      linear-gradient(
+         0deg,
+         var(--chkbg) 43%,
+         var(--chkfg) 43%,
+         var(--chkfg) 57%,
+         var(--chkbg) 57%
+      );
+}
+.checkbox:disabled {
+   cursor: not-allowed;
+   border-color: transparent;
+   --tw-bg-opacity: 1;
+   background-color: var(--primary);
+   opacity: 0.2;
+}
+@keyframes checkmark {
+   0% {
+      background-position-y: 5px;
+   }
+
+   50% {
+      background-position-y: -2px;
+   }
+
+   to {
+      background-position-y: 0;
+   }
+}

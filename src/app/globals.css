@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   html {
+      --primary: #1668e3;
+      --primary-hover: #115bca;
+      --primary-light: #dce4f2;
+      --primary-very-light: #1668e318;
+      --danger: #c73737;
+      --danger-light: #c7373711;
+      --success: #4ecb71;
+   }
+   :root {
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+   }
+}
+
+/* body {
+   font-family: "Inter", sans-serif;
+} */
+@layer utilities {
+   .shadow-box {
+      @apply bg-white sm:shadow-[0_5px_30px] sm:shadow-gray-200;
+   }
+   .bg-primary {
+      @apply bg-[var(--primary)];
+   }
+   .bg-primary-hover {
+      @apply hover:bg-[var(--primary-hover)];
+   }
+   .text-primary {
+      @apply text-[var(--primary)];
+   }
+   .text-danger {
+      @apply text-[var(--danger)];
+   }
+   .sidebar[active="show"] {
+      @apply bg-[var(--primary-light)] text-[var(--primary)];
+   }
+   .sidebar[active="hide"] {
+      @apply text-gray-500 hover:text-[var(--primary)] transition-colors;
+   }
+   .badge[badge="show"] {
+      @apply relative;
+   }
+   .badge[badge="show"]::before {
+      content: "";
+      @apply w-1.5 h-1.5 bg-[var(--danger)] rounded-full absolute top-0 right-0;
+   }
+}
+button {
+   user-select: none;
+}
+@import url(@/css/input.css);
+@import url(@/css/loader.css);
+@import url(@/css/sidebar.css);

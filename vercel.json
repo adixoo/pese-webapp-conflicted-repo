@@ -1,0 +1,9 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "save": false,
+      "preserve": false,
+      "preserve2": false
+    }
+  }
+}

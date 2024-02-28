@@ -9,6 +9,9 @@ import {
    ElevatedButtonControlled,
    OutlinedButtonControlled,
 } from "@/components/Components/Common/Button";
+
+import ElectricityBillComponent from "./Pages/ElectricityBill";
+
 export function MobileService({ heading }) {
    return (
       <>
@@ -91,7 +94,11 @@ export function FastTag({ heading }) {
 export function ElectricityBill({ heading }) {
    return (
       <>
-         <ServicePageShadowBox heading={heading}>hello</ServicePageShadowBox>
+         <ServicePageShadowBox heading={heading}>
+            <div className="relative">
+               <ElectricityBillComponent />
+            </div>
+         </ServicePageShadowBox>
       </>
    );
 }

@@ -10,7 +10,7 @@ export default function ServicePageLayoutComponent({ children, ...props }) {
       <>
          <TopNavbar heading={heading} />
          <ServiceBar />
-         <div className="w-full -translate-y-10 flex items-start justify-center flex-wrap gap-10 mb-20 px-4">
+         <div className="w-full -translate-y-10 flex items-start justify-center flex-wrap gap-10 md:mb-20">
             {children}
          </div>
       </>
